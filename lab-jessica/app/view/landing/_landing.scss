@@ -1,0 +1,13 @@
+@import "../../scss/lib/theme/_vars";
+
+.join-container {
+  p {
+    display: inline;
+    font-weight: lighter;
+  }
+  a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $color-secondary;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../scss/lib/theme/_vars";
+
+.signup-form {
+  background: $color-primary;
+  padding: 1em;
+  color: $color-secondary;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+
+  .input-std {
+    display: block;
+    padding: 0.8em;
+    margin: auto;
+    margin-top: 2em;
+    width: 90%;
+  }
+
+  .btn-std {
+    background-color: $color-secondary;
+    color: white;
+    width: 40%;
+    margin: 1em;
+    padding: 1em;
+    border: none;
+    letter-spacing: inherit;
+  }
+
+}

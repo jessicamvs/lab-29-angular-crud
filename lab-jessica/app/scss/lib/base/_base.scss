@@ -1,0 +1,11 @@
+@import "../theme/_vars";
+
+html, body {
+  width: 436px;
+  margin: auto;
+  font-family: $font-primary;
+}
+
+main {
+  background-color: $color-primary;
+}
