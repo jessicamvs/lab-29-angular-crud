@@ -34,6 +34,7 @@ context.keys().forEach( key => {
 context = require.context('./component/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
+  console.log('THIS IS NAME for component', name);
   let module = context(key);
   cfgram.component(name, module);
 });

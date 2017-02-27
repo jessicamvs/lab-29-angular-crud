@@ -1,0 +1,20 @@
+<section class="create-gallery">
+  <form class="gallery-form"
+    ng-submit="createGalleryCtrl.createGallery()"
+    no-validate>
+    <p>Create Gallery</p>
+
+      <input class="input-std"
+        type="text"
+        placeholder="gallery name"
+        ng-minlength="4"
+        ng-model="createGalleryCtrl.gallery.name" required>
+
+      <input class="input-std"
+        type="text"
+        placeholder="gallery description"
+        ng-model="createGalleryCtrl.gallery.desc">
+
+      <input type="submit" class="btn-std" value="create gallery">
+  </form>
+</section>
