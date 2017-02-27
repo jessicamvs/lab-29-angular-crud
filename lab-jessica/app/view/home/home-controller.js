@@ -2,9 +2,9 @@
 
 require('./_home.scss');
 
-module.exports = ['$log', 'galleryService', HomeController];
+module.exports = ['$log', '$rootScope', 'galleryService', HomeController];
 
-function HomeController($log, galleryService) {
+function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
 
   this.galleries = [];
@@ -16,5 +16,16 @@ function HomeController($log, galleryService) {
     });
   };
 
+  this.deleteGallery = function(id) {
+    galleryService.deleteGallery(id)
+    .then(() => {
+      this.fetchGalleries();
+    });
+  };
+
   this.fetchGalleries();
+  
+  // $rootScope.$on('$locationChangeSuccess', () => {
+  //   this.fetchGalleries();
+  // });
 }
