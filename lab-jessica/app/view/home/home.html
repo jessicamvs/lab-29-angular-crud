@@ -1,0 +1,34 @@
+<create-gallery></create-gallery>
+
+<section class="home">
+  <h2>Galleries</h2>
+  <ul>
+    <li ng-repeat="gallery in homeCtrl.galleries">
+      <div ng-hide="!homeCtrl.hideEditForm">
+        <span>name: {{gallery.name}}</span>
+        <span>description: {{gallery.desc}}</span>
+        <span>id: {{gallery._id}}</span>
+        <button ng-click="homeCtrl.hideEditForm=false" type="button" class="btn-std" name="edit">edit gallery</button>
+        <button ng-click="homeCtrl.deleteGallery(gallery._id)" type="button" class="btn-std" name="delete">delete gallery</button>
+      </div>
+      <form class="edit-form"
+        ng-hide="homeCtrl.hideEditForm"
+        ng-submit="homeCtrl.updateGallery(gallery)"
+        novalidate>
+          <input class="input-std"
+            type="text"
+            placeholder="gallery name"
+            ng-model="gallery.name" required>
+
+          <input class="input-std"
+            type="text"
+            placeholder="gallery description"
+            ng-model="gallery.desc">
+
+          <input type="submit" class="btn-std" value="update">
+      </form>
+    </li>
+  </ul>
+
+  <logout></logout>
+</section>
